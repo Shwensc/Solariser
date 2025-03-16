@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50" fill="none">
+  <path d="M20 10C15.0294 10 11 14.0294 11 19C11 23.9706 15.0294 28 20 28C24.9706 28 29 23.9706 29 19C29 14.0294 24.9706 10 20 10Z" fill="#3B82F6"/>
+  <path d="M40 15H60" stroke="#3B82F6" stroke-width="2"/>
+  <path d="M40 20H60" stroke="#3B82F6" stroke-width="2"/>
+  <path d="M40 25H60" stroke="#3B82F6" stroke-width="2"/>
+  <path d="M70 15L90 15" stroke="#3B82F6" stroke-width="2"/>
+  <path d="M70 20L90 20" stroke="#3B82F6" stroke-width="2"/>
+  <path d="M70 25L90 25" stroke="#3B82F6" stroke-width="2"/>
+  <text x="100" y="25" fill="#3B82F6" font-family="Arial" font-weight="bold" font-size="20">SOLAR</text>
+</svg>
+
