@@ -21,7 +21,7 @@ export default function RooftopSelector() {
 
   const handleLocationSubmit = async (location) => {
     const response = await fetch(
-      `https://nominatim.openstreetmap.org/search?format=json&q=${location}`
+      https,//nominatim.openstreetmap.org/search?format=json&q=${location}
     );
     const data = await response.json();
 
