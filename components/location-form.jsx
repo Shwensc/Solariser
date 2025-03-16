@@ -9,7 +9,7 @@ import "leaflet/dist/leaflet.css";
 import "leaflet-draw/dist/leaflet.draw.css";
 
 export default function RooftopSelector() {
-  const [coords, setCoords] = useState([19.375326457747448, 72.82514059293946]); // Default: London
+  const [coords, setCoords] = useState([19.044442165817145, 72.8204137676736]); // Default: London
   const [area, setArea] = useState(null);
   const mapRef = useRef();
 
@@ -52,13 +52,7 @@ export default function RooftopSelector() {
     <div className="flex flex-col items-center space-y-6">
       {/* Location Input */}
       <div className="bg-white bg-opacity-10 p-6 rounded-lg backdrop-blur-md w-full max-w-md">
-        <h2 className="text-xl font-bold text-white mb-3">Enter Location</h2>
-        <input
-          type="text"
-          className="w-full px-3 py-2 bg-white bg-opacity-20 border border-gray-300 rounded-md text-white placeholder-gray-400 focus:outline-none"
-          placeholder="Enter city or coordinates"
-          onKeyDown={(e) => e.key === "Enter" && handleLocationSubmit(e.target.value)}
-        />
+        <h2 className="text-xl font-bold text-white mb-3">Dear user, Please choose your desired area</h2>
       </div>
 
       {/* Map */}
