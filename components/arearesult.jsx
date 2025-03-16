@@ -9,7 +9,7 @@ const solarPanels = [
     length: 1.7,
     width: 1.05,
     wattage: 360,
-    image: "/area.png",
+    image: "/sunpower.jpg",
   },
   {
     model: "LG NeON R 350W",
@@ -17,7 +17,7 @@ const solarPanels = [
     length: 1.7,
     width: 1.02,
     wattage: 350,   
-    image: "/img/lgneonr.webp",
+    image: "/lgneonr.webp",
   },
   {
     model: "Panasonic HIT 330W",
@@ -25,7 +25,7 @@ const solarPanels = [
     length: 1.59,
     width: 1.05,
     wattage: 330,
-    image: "/img/panasonic.jpg",
+    image: "/panasonic.jpg",
   },
   {
     model: "Canadian Solar 335W",
@@ -33,7 +33,7 @@ const solarPanels = [
     length: 1.99,
     width: 1.0,
     wattage: 335,
-    image: "/img/canadian.webp",
+    image: "/canadian.webp",
   },
   {
     model: "REC Alpha 380W",
@@ -41,7 +41,7 @@ const solarPanels = [
     length: 1.75,
     width: 1.04,
     wattage: 380,
-    image: "/img/rec.webp",
+    image: "/rec.webp",
   },
 ];
 
