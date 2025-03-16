@@ -20,7 +20,7 @@ export default function LocationButton() {
   return (
     <>
       <button
-        className={`fixed bottom-8 right-8 bg-green-500 text-white font-bold py-2 px-4 rounded-full shadow-lg transition-transform duration-300 ease-in-out ${
+        className={`fixed bottom-8 right-8 bg-black text-white font-bold py-2 px-4 rounded-full shadow-lg transition-transform duration-300 ease-in-out ${
           isZoomed ? "scale-110" : "hover:scale-105"
         }`}
         onClick={handleClick}
@@ -34,8 +34,8 @@ export default function LocationButton() {
             <h2 className="text-lg font-bold mb-4">Enter your location</h2>
             <input
               type="text"
-              className="w-full p-2 border rounded mb-4"
-              placeholder="e.g., Bandra"
+              className="w-full p-2 border rounded mb-4 text-black"
+              placeholder="Your Location Here"
               value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
@@ -47,7 +47,7 @@ export default function LocationButton() {
                 Cancel
               </button>
               <button
-                className="bg-green-500 text-white px-4 py-2 rounded"
+                className="bg-black text-white px-4 py-2 rounded"
                 onClick={handleSubmit}
               >
                 Submit
@@ -59,4 +59,3 @@ export default function LocationButton() {
     </>
   )
 }
-
