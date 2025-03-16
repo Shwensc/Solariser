@@ -14,7 +14,7 @@ export default function DashboardContent() {
 
   const messages = [
     {
-      text: "Crack in panel, contact nearest dealer.",
+      text: "Crack in panel, Find a replacement now",
       showButton: true, // Show button only for this message
     },
     {
@@ -22,7 +22,7 @@ export default function DashboardContent() {
       showButton: false,
     },
     {
-      text: "Dark spot on panel. Contact nearest dealer.",
+      text: "Dark spot on panel. Contact your dealer immediately.",
       showButton: false,
     },
   ];

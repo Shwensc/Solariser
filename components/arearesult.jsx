@@ -1,6 +1,7 @@
 "use client";
 
 import { useArea } from "@/components/AreaContext";
+import Link from "next/link";
 
 const solarPanels = [
   {
@@ -9,7 +10,7 @@ const solarPanels = [
     length: 1.7,
     width: 1.05,
     wattage: 360,
-    efficiency: 0.85, // 85% efficiency
+    efficiency: 0.85,
     image: "/sunpower.jpg",
   },
   {
@@ -36,7 +37,7 @@ const solarPanels = [
     length: 1.99,
     width: 1.0,
     wattage: 335,
-    efficiency: 0.80, // Polycrystalline panels have slightly lower efficiency
+    efficiency: 0.80,
     image: "/canadian.webp",
   },
   {
@@ -68,8 +69,8 @@ export default function AreaResult() {
 
   return (
     <div className="container mx-auto p-6">
-      <h2 className="text-center text-2xl font-bold mb-6 text">
-        Your top 5 Solar Panel Options are: 
+      <h2 className="text-center text-2xl font-bold mb-6">
+        Your top 5 Solar Panel Options are:
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {solarPanels.map((panel, index) => {
@@ -102,12 +103,22 @@ export default function AreaResult() {
               <p className="text-black">Daily Energy: {dailyEnergy.toFixed(2)} kWh</p>
               <p className="text-black">Monthly Savings: ₹{monthlySavings.toFixed(2)}</p>
               <p className="text-black">Installation Cost: ₹{installationCost.toFixed(2)}</p>
-              <p className="text-black">
-                Payback Period: {paybackPeriod.toFixed(1)} months
-              </p>
+              <p className="text-black">Payback Period: {paybackPeriod.toFixed(1)} months</p>
             </div>
           );
         })}
+      </div>
+
+      {/* Big Green Button */}
+      <div className="flex justify-center mt-8">
+        <Link
+          href="https://www.google.com/maps/search/solar+power+delaer+bandra+west/@19.0666955,72.8209501,15z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDMxMi4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-xl"
+        >
+          Find My Nearest Solar Dealer
+        </Link>
       </div>
     </div>
   );
