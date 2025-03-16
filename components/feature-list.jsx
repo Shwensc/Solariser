@@ -5,23 +5,23 @@ export default function FeatureList() {
     {
       icon: <Cog className="h-6 w-6 text-blue-400" />,
       title: "Adaptable performance",
-      description: "Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.",
+      description: "Our website effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.😍",
     },
     {
       icon: <Wrench className="h-6 w-6 text-blue-400" />,
       title: "Built to last",
-      description: "Experience unmatched durability that goes above and beyond with lasting investment.",
+      description: "Experience unmatched preciseness in measurements that goes above and beyond with lasting investment.🤷‍♀️",
     },
     {
       icon: <ThumbsUp className="h-6 w-6 text-blue-400" />,
       title: "Great user experience",
-      description: "Integrate our product into your routine with an intuitive and easy-to-use interface.",
+      description: "Built a simple to navigate UI using Next.js👌",
     },
     {
       icon: <Pencil className="h-6 w-6 text-blue-400" />,
       title: "Innovative functionality",
       description:
-        "Stay ahead with features that set new standards, addressing your evolving needs better than the rest.",
+        "Stay ahead with features that syou wont find in any other solar website😉",
     },
   ]
 

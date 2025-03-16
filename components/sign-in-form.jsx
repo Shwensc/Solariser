@@ -21,7 +21,7 @@ export default function SignInForm() {
   return (
     <div className="space-y-6">
       <div className="text-center">
-        <h1 className="text-4xl font-bold">Sign in</h1>
+        <h1 className="text-4xl font-bold"><p>Welcome Back!</p>Sign in</h1>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-4">
