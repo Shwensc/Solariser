@@ -9,6 +9,7 @@ const solarPanels = [
     length: 1.7,
     width: 1.05,
     wattage: 360,
+    efficiency: 0.85, // 85% efficiency
     image: "/sunpower.jpg",
   },
   {
@@ -16,7 +17,8 @@ const solarPanels = [
     type: "Monocrystalline",
     length: 1.7,
     width: 1.02,
-    wattage: 350,   
+    wattage: 350,
+    efficiency: 0.85,
     image: "/lgneonr.webp",
   },
   {
@@ -25,6 +27,7 @@ const solarPanels = [
     length: 1.59,
     width: 1.05,
     wattage: 330,
+    efficiency: 0.86,
     image: "/panasonic.jpg",
   },
   {
@@ -33,6 +36,7 @@ const solarPanels = [
     length: 1.99,
     width: 1.0,
     wattage: 335,
+    efficiency: 0.80, // Polycrystalline panels have slightly lower efficiency
     image: "/canadian.webp",
   },
   {
@@ -41,15 +45,16 @@ const solarPanels = [
     length: 1.75,
     width: 1.04,
     wattage: 380,
+    efficiency: 0.88,
     image: "/rec.webp",
   },
 ];
 
 export default function AreaResult() {
   const { selectedArea } = useArea();
-  const sunlightHoursPerDay = 5;
-  const costPerKWh = 5;
-  const installationCostPerPanel = 11450;
+  const sunlightHoursPerDay = 5; // Adjust based on location
+  const costPerKWh = 5; // Price per kWh in ₹
+  const installationCostPerPanel = 11450; // Estimated per panel cost
 
   if (!selectedArea || selectedArea <= 0) {
     return (
@@ -63,37 +68,43 @@ export default function AreaResult() {
 
   return (
     <div className="container mx-auto p-6">
-      <h2 className="text-center text-2xl font-bold mb-6">Solar Panel Options</h2>
+      <h2 className="text-center text-2xl font-bold mb-6 text">
+        Your top 5 Solar Panel Options are: 
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {solarPanels.map((panel, index) => {
           const panelArea = panel.length * panel.width;
-          const numPanels = Math.floor(selectedArea / panelArea);
+          const numPanels = Math.floor(selectedArea / panelArea); // Maximum fit
 
           if (numPanels <= 0) {
             return (
               <div key={index} className="bg-gray-300 p-4 rounded-lg text-center">
-                <h3 className="text-lg font-bold">{panel.model}</h3>
+                <h3 className="text-lg font-bold text-black">{panel.model}</h3>
                 <p className="text-red-500">No panels can fit in the selected area.</p>
               </div>
             );
           }
 
-          const dailyEnergy = (numPanels * panel.wattage * sunlightHoursPerDay) / 1000;
-          const dailyCost = dailyEnergy * costPerKWh;
-          const monthlyCost = dailyCost * 30;
+          const actualWattagePerPanel = panel.wattage * panel.efficiency;
+          const totalSystemWattage = numPanels * actualWattagePerPanel;
+          const dailyEnergy = (totalSystemWattage * sunlightHoursPerDay) / 1000; // kWh per day
+          const monthlyEnergy = dailyEnergy * 30; // kWh per month
+          const monthlySavings = monthlyEnergy * costPerKWh;
           const installationCost = numPanels * installationCostPerPanel;
-          const paybackPeriod = installationCost / monthlyCost;
+          const paybackPeriod = installationCost / monthlySavings; // In months
 
           return (
             <div key={index} className="bg-white shadow-md p-4 rounded-lg">
               <img src={panel.image} alt={panel.model} className="w-full h-40 object-cover rounded-md" />
-              <h3 className="text-lg font-bold mt-2">{panel.model}</h3>
-              <p className="text-gray-700">Type: {panel.type}</p>
-              <p>Panels Fit: {numPanels}</p>
-              <p>Daily Energy: {dailyEnergy.toFixed(2)} kWh</p>
-              <p>Monthly Savings: ₹{monthlyCost.toFixed(2)}</p>
-              <p>Installation Cost: ₹{installationCost.toFixed(2)}</p>
-              <p>Payback Period: {paybackPeriod.toFixed(1)} months</p>
+              <h3 className="text-lg font-bold text-black mt-2">{panel.model}</h3>
+              <p className="text-black">Type: {panel.type}</p>
+              <p className="text-black">Panels Fit: {numPanels}</p>
+              <p className="text-black">Daily Energy: {dailyEnergy.toFixed(2)} kWh</p>
+              <p className="text-black">Monthly Savings: ₹{monthlySavings.toFixed(2)}</p>
+              <p className="text-black">Installation Cost: ₹{installationCost.toFixed(2)}</p>
+              <p className="text-black">
+                Payback Period: {paybackPeriod.toFixed(1)} months
+              </p>
             </div>
           );
         })}
