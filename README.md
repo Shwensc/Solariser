@@ -9,7 +9,7 @@ Solariser is a web-based application that helps users:
 ✅ Find nearby solar dealers for quick installation  
 
 ## Structure:  
-![Here's how the flow of the code looks like: ](https://ibb.co/chsHncPR)  
+![Here's how the flow of the code looks like: ](public/Screenshot 2025-03-20 225653.png)  
 
 ## ⚡ Features  
 🌞 **Solar Panel Estimator** – Calculates the number of panels based on area  
