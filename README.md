@@ -1,6 +1,6 @@
 # Solariser 🌞 - Smart Solar Panel Recommendation & Analysis
 
-# 🚀 About the Project  
+## 🚀 About the Project  
 Solariser is a web-based application that helps users:  
 ✅ Analyze rooftop area to determine solar panel capacity  
 ✅ Get the best solar panel recommendations based on area & efficiency  
@@ -8,17 +8,17 @@ Solariser is a web-based application that helps users:
 ✅ Detect solar panel faults from uploaded images  
 ✅ Find nearby solar dealers for quick installation  
 
-# Structure:  
+## Structure:  
 ![Here's how the flow of the code looks like: ](https://ibb.co/chsHncPR)  
 
-# ⚡ Features  
+## ⚡ Features  
 🌞 **Solar Panel Estimator** – Calculates the number of panels based on area  
 💰 **Cost & Savings Calculator** – Estimates energy savings and installation costs  
 🔍 **Fault Detection** – Model detects cracks, dirt, and dark spots in solar panels  
 📍 **Find Nearby Dealers** – Google Maps integration for local solar dealers  
 📸 **Image Upload & Analysis** – Supports multiple fault detection scenarios  
 
-# 🛠 Tech Stack  
+## 🛠 Tech Stack  
 **Frontend:** Next.js, React, TailwindCSS  
 **Backend:** Node.js, Express.js, RestNet for model  
 
