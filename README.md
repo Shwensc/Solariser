@@ -1,4 +1,4 @@
-# #Solariser 🌞 - Smart Solar Panel Recommendation & Analysis
+## Solariser 🌞 - Smart Solar Panel Recommendation & Analysis
 
 ## 🚀 About the Project  
 Solariser is a web-based application that helps users:  
@@ -18,11 +18,11 @@ Solariser is a web-based application that helps users:
 📍 **Find Nearby Dealers** – Google Maps integration for local solar dealers  
 📸 **Image Upload & Analysis** – Supports multiple fault detection scenarios  
 
-## 🛠 Tech Stack  
+# 🛠 Tech Stack  
 **Frontend:** Next.js, React, TailwindCSS  
 **Backend:** Node.js, Express.js, RestNet for model  
 
-#🚀 Getting Started
+# 🚀 Getting Started
 1️⃣ Clone the Repository
 git clone https://github.com/your-username/solariser.git
 2️⃣ Install Dependencies
