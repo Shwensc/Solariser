@@ -1,6 +1,6 @@
-## Solariser 🌞 - Smart Solar Panel Recommendation & Analysis
+# Solariser 🌞 - Smart Solar Panel Recommendation & Analysis
 
-## 🚀 About the Project  
+# 🚀 About the Project  
 Solariser is a web-based application that helps users:  
 ✅ Analyze rooftop area to determine solar panel capacity  
 ✅ Get the best solar panel recommendations based on area & efficiency  
